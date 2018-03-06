@@ -13,8 +13,8 @@ namespace Bookshelf.Models
         public string Description { get; set; }
         public string ISBN { get; set; }
 
-        [ForeignKey("Category")] // Set up the foreign key for relationship
-        public int CategoryID { get; set; }
-        public virtual Category Catagory { get; set; } // A navigation property with one category 
+        [ForeignKey("Category")] // Set up the foreign key for relationship. Each Model has it own key
+        public int CategoryID { get; set; } 
+        public virtual Category Category { get; set; } // A navigation property with one category 
     }
 }
