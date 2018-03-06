@@ -7,7 +7,90 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Book</h4>
+    <div class="container">
+        <h4>Book</h4>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click for details</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Details</h4>
+                    </div>
+                    <div class="modal-body">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Category.Name)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Category.Name)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Title)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Title)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.PublishedDate)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.PublishedDate)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Description)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Description)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.ISBN)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.ISBN)
+                            </dd>
+
+                        </dl>
+                        <ul class="pager">
+                            <li>@Html.ActionLink("Edit", "Edit", new { id = Model.BookID })</li>
+                            <li>@Html.ActionLink("Back to List", "Index")</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    @*<h4>Book</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -50,9 +133,6 @@
             @Html.DisplayFor(model => model.ISBN)
         </dd>
 
-    </dl>
+    </dl>*@
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
